@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #e0e0e0; /* Lighter shade of gray */
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Default to column layout */
+}
+
+header a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    margin: 0 15px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-direction: row; /* Default to row layout */
+}
+
+main {
+    padding: 2vw; /* Add responsive padding */
+    line-height: 1.5;
+    flex: 1; /* Ensures main takes up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    margin-bottom: 1em; /* Spacing between sections */
+    padding: 1vw; /* Add responsive padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    background-color: #e0e0e0; /* Lighter shade of gray */
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em 0;
+    display: inline-block;
+    min-width: calc(33% - 2em); /* Responsive card width */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        min-width: calc(50% - 2em); /* Adjust card width for tablets */
+    }
+
+    header {
+        flex-direction: column; /* Column layout for smaller devices */
+    }
+
+    nav ul {
+        flex-direction: column; /* Column layout for smaller devices */
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        min-width: 100%; /* Full width for mobile devices */
+    }
+}
